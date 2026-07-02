@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotelería y Alojamientos | Turismo Simoca</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="overlay">
+
+        <h1>🛏 Hotelería y Alojamientos</h1>
+
+        <p>Encontrá los principales alojamientos de la ciudad de Simoca.</p>
+
+    </div>
+
+</header>
+
+<main class="contenedor">
+
+<input
+type="text"
+id="buscador"
+placeholder="🔍 Buscar alojamiento...">
+
+<div class="lista">
+
+<!-- HOTEL APART -->
+
+<div class="card">
+
+    <h2>Hotel Apart</h2>
+
+    <p>
+        <strong>📍 Dirección</strong><br>
+        Gómez Llueca 1031
+    </p>
+
+    <p>
+        <strong>📞 Teléfonos</strong><br>
+        <a href="tel:+543815600231">3815600231</a><br>
+        <a href="tel:+543815936123">3815936123</a>
+    </p>
+
+    <p>
+        <strong>🕒 Check-out</strong><br>
+        10:00 hs
+    </p>
+
+    <p>
+        <strong>🛏 Servicios</strong><br>
+        6 departamentos • 10 habitaciones<br>
+        Media pensión • Wi-Fi
+    </p>
+
+    <a
+        class="boton"
+        target="_blank"
+        href="https://maps.app.goo.gl/ZngtT4TquwMKnog9A">
+
+        📍 Ver ubicación
+
+    </a>
+
+</div>
+
+<!-- HOSTAL DEL VALLE -->
+
+<div class="card">
+
+    <h2>Hostal del Valle</h2>
+
+    <p>
+        <strong>📍 Dirección</strong><br>
+        25 de Mayo 674
+    </p>
+
+    <p>
+        <strong>📞 Teléfonos</strong><br>
+        <a href="tel:+543863441992">3863441992</a><br>
+        <a href="tel:+543863481990">3863481990</a>
+    </p>
+
+    <p>
+        <strong>🕒 Check-out</strong><br>
+        10:00 hs
+    </p>
+
+    <p>
+        <strong>🛏 Servicios</strong><br>
+        16 habitaciones<br>
+        Cable • Wi-Fi • Desayuno
+    </p>
+
+    <a
+        class="boton"
+        target="_blank"
+        href="https://www.google.com/maps/search/?api=1&query=25+de+Mayo+674+Simoca+Tucuman">
+
+        📍 Ver ubicación
+
+    </a>
+
+</div>
+
+<!-- HOTEL SIMOCA -->
+
+<div class="card">
+
+    <h2>Hotel Simoca</h2>
+
+    <p>
+        <strong>📍 Dirección</strong><br>
+        Av. Marcelo T. de Alvear
+    </p>
+
+    <p>
+        <strong>📞 Teléfono</strong><br>
+        <a href="tel:+543863412681">3863412681</a>
+    </p>
+
+    <p>
+        <strong>🕒 Check-out</strong><br>
+        10:00 hs
+    </p>
+
+    <p>
+        <strong>🛏 Servicios</strong><br>
+        10 habitaciones • 2 departamentos<br>
+        Desayuno • Wi-Fi
+    </p>
+
+    <a
+        class="boton"
+        target="_blank"
+        href="https://maps.app.goo.gl/pWY3UshQtzKGb4aQA">
+
+        📍 Ver ubicación
+
+    </a>
+
+</div>
+
+<!-- HOTEL PORTAL -->
+
+<div class="card">
+
+    <h2>Hotel Portal</h2>
+
+    <p>
+        <strong>📍 Dirección</strong><br>
+        9 de Julio 552
+    </p>
+
+    <p>
+        <strong>📞 Teléfono</strong><br>
+        <a href="tel:+543863481347">3863481347</a>
+    </p>
+
+    <p>
+        <strong>🕒 Check-out</strong><br>
+        10:00 hs
+    </p>
+
+    <p>
+        <strong>🛏 Servicios</strong><br>
+        8 habitaciones<br>
+        Wi-Fi
+    </p>
+
+    <a
+        class="boton"
+        target="_blank"
+        href="https://maps.app.goo.gl/pcd4U5sb7KrcwrPbA">
+
+        📍 Ver ubicación
+
+    </a>
+
+</div>
+
+</div>
+
+</main>
+
+<script>
+
+const buscador = document.getElementById("buscador");
+
+buscador.addEventListener("keyup", function(){
+
+    const texto = buscador.value.toLowerCase();
+
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card=>{
+
+        card.style.display =
+        card.innerText.toLowerCase().includes(texto)
+        ? "flex"
+        : "none";
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>

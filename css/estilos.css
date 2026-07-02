@@ -1,0 +1,873 @@
+/* =====================================
+   TURISMO SIMOCA
+   estilos.css
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f2ed;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ==========================
+   CABECERA
+========================== */
+
+.hero{
+    background:linear-gradient(135deg,#8b5b22,#b47b36);
+    color:#fff;
+    padding:45px 20px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.hero h1{
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:1rem;
+    opacity:.95;
+}
+
+/* ==========================
+   CONTENEDOR
+========================== */
+
+.contenedor{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+/* ==========================
+   BUSCADOR
+========================== */
+
+#buscador{
+    width:100%;
+    padding:15px 18px;
+    font-size:16px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    margin-bottom:35px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+#buscador:focus{
+    box-shadow:0 0 0 3px rgba(180,123,54,.30);
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.lista{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+/* ==========================
+   TARJETAS
+========================== */
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
+
+    min-height:360px;
+
+    transition:.25s ease;
+
+    border-top:6px solid #b47b36;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+/* ==========================
+   TITULO
+========================== */
+
+.card h2{
+    color:#7a4f1b;
+    text-align:center;
+    margin-bottom:18px;
+    font-size:1.35rem;
+}
+
+.card h2::after{
+    content:"";
+    display:block;
+    width:60px;
+    height:3px;
+    background:#b47b36;
+    margin:10px auto 0;
+    border-radius:10px;
+}
+
+/* ==========================
+   TEXTO
+========================== */
+
+.card p{
+    margin-bottom:12px;
+    font-size:.95rem;
+}
+
+.card strong{
+    color:#7a4f1b;
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+.card a{
+    color:#7a4f1b;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.card a:hover{
+    text-decoration:underline;
+}
+
+/* ==========================
+   BOTÓN
+========================== */
+
+.boton{
+    margin-top:auto;
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    background:#b47b36;
+
+    color:#fff !important;
+
+    padding:13px;
+
+    border-radius:10px;
+
+    text-decoration:none !important;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    align-self:flex-end; /* 👈 asegura alineación final */
+}
+
+.boton:hover{
+    background:#8b5b22;
+    transform:scale(1.02);
+}
+
+
+
+.foto{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+.detalle{
+    margin:15px 0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.detalle h3{
+    margin-bottom: 10px;
+    color: #8b5b22;
+}
+
+.detalle ul{
+    list-style:none;
+    padding:0;
+    margin:0 auto;
+    width:max-content;
+    text-align:left;
+}
+
+.detalle li{
+    margin:8px 0;
+    line-height:1.4;
+}
+
+.descripcion{
+    min-height: 60px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+.hero{
+    padding:35px 18px;
+}
+
+.hero h1{
+    font-size:1.8rem;
+    line-height:1.3;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+.contenedor{
+    margin:25px auto;
+    padding:0 15px;
+}
+
+#buscador{
+    font-size:16px;
+    padding:14px 16px;
+}
+
+.lista{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.card{
+    min-height:auto;
+    padding:20px;
+}
+
+.card h2{
+    font-size:1.5rem;
+}
+
+.foto{
+    height:220px;
+}
+
+.descripcion{
+    min-height:auto;
+    text-align:center;
+}
+
+.detalle{
+    margin:10px 0;
+}
+
+.detalle h3{
+    font-size:1.2rem;
+}
+
+.detalle ul{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:0;
+}
+
+.detalle li{
+    width:100%;
+    max-width:280px;
+    text-align:left;
+    margin:6px 0;
+}
+
+.boton{
+    width:100%;
+    padding:15px;
+    font-size:1rem;
+}
+
+}
+
+@media (max-width:480px){
+
+.hero h1{
+    font-size:1.5rem;
+}
+
+.hero p{
+    font-size:.95rem;
+}
+
+.card{
+    padding:18px;
+}
+
+.card h2{
+    font-size:1.3rem;
+}
+
+.foto{
+    height:190px;
+}
+
+.descripcion{
+    font-size:.95rem;
+}
+
+.detalle h3{
+    font-size:1.05rem;
+}
+
+.detalle li{
+    font-size:.95rem;
+}
+
+.boton{
+    padding:14px;
+}
+
+}
+
+/* ==========================
+   Gastronomia
+========================== */
+
+.presentacion{
+
+background:#fff;
+padding:30px;
+border-radius:18px;
+margin-bottom:35px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+text-align:center;
+
+}
+
+.presentacion h2{
+
+color:#8b5b22;
+margin-bottom:15px;
+
+}
+
+
+.presentacion p{
+
+max-width:850px;
+margin:auto;
+font-size:1rem;
+line-height:1.8;
+
+}
+
+/* ESPECIALIDADES */
+
+.especialidades{
+
+margin-bottom:35px;
+
+}
+
+
+.especialidades h2{
+
+text-align:center;
+color:#8b5b22;
+margin-bottom:25px;
+
+}
+
+/* comidas */
+
+.comidas{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+
+}
+
+.comida{
+
+background:#fff;
+padding:14px;
+border-radius:50px;
+
+font-weight:600;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+min-height:55px;
+
+}
+
+.comida:hover{
+
+transform:translateY(-3px);
+background:#b47b36;
+color:#fff;
+
+}
+
+/* INFORMACION */
+
+.info-feria{
+
+background:#fff7ea;
+border-left:6px solid #b47b36;
+
+padding:20px;
+
+border-radius:12px;
+
+margin:35px 0;
+
+font-size:1rem;
+line-height:1.8;
+
+}
+
+/* RANCHOS */
+
+.ranchos{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:20px;
+
+margin-top:35px;
+
+}
+
+.rancho{
+
+display:flex;
+
+align-items:center;
+
+background:#fff;
+
+border-radius:18px;
+
+padding:18px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+transition:.25s;
+
+border-left:6px solid #b47b36;
+
+}
+
+.rancho:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 25px rgba(0,0,0,.12);
+
+}
+
+.numero{
+
+width:75px;
+height:75px;
+
+border-radius:50%;
+
+background:#b47b36;
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+font-size:1.3rem;
+
+font-weight:700;
+
+margin-right:20px;
+
+flex-shrink:0;
+
+}
+
+.datos{
+
+flex:1;
+
+}
+
+.datos h3{
+
+color:#7a4f1b;
+
+margin-bottom:8px;
+
+font-size:1.2rem;
+
+}
+
+.datos p{
+
+margin:0;
+
+color:#666;
+
+}
+/* ==========================
+   RESPONSIVE
+========================== */
+
+/* ---------- TABLETS ---------- */
+
+@media (max-width:768px){
+
+    .presentacion{
+        padding:25px;
+    }
+
+    .presentacion h2{
+        font-size:1.8rem;
+    }
+
+    .presentacion p{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+    .especialidades h2{
+        font-size:1.6rem;
+    }
+
+    /* COMIDAS */
+
+    .comidas{
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:12px;
+
+    }
+
+    .comida{
+
+        padding:12px;
+
+        font-size:.9rem;
+
+        min-height:60px;
+
+    }
+
+    /* INFO */
+
+    .info-feria{
+
+        padding:18px;
+
+        font-size:.95rem;
+
+    }
+
+    /* RANCHOS */
+
+    .ranchos{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+
+    }
+
+    .rancho{
+
+        flex-direction:column;
+
+        justify-content:center;
+        align-items:center;
+
+        text-align:center;
+
+        padding:15px;
+
+    }
+
+    .numero{
+
+        width:60px;
+        height:60px;
+
+        margin:0 0 12px;
+
+        font-size:1rem;
+
+    }
+
+    .datos h3{
+
+        font-size:.95rem;
+
+        line-height:1.3;
+
+    }
+
+    .datos p{
+
+        font-size:.85rem;
+
+    }
+
+}
+
+
+/* ---------- CELULARES ---------- */
+
+@media (max-width:480px){
+
+    .hero h1{
+
+        font-size:2rem;
+
+    }
+
+    .hero p{
+
+        font-size:.95rem;
+
+    }
+
+    .presentacion{
+
+        padding:18px;
+
+    }
+
+    .presentacion h2{
+
+        font-size:1.5rem;
+
+    }
+
+    .presentacion p{
+
+        font-size:.9rem;
+
+    }
+
+    .especialidades h2{
+
+        font-size:1.4rem;
+
+    }
+
+    /* COMIDAS */
+
+    .comidas{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:10px;
+
+    }
+
+    .comida{
+
+        padding:10px;
+
+        font-size:.82rem;
+
+        min-height:55px;
+
+    }
+
+    /* INFO */
+
+    .info-feria{
+
+        padding:15px;
+
+        font-size:.9rem;
+
+        line-height:1.6;
+
+    }
+
+    /* RANCHOS */
+
+    .ranchos{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:10px;
+
+    }
+
+    .rancho{
+
+        padding:12px;
+
+    }
+
+    .numero{
+
+        width:52px;
+        height:52px;
+
+        font-size:.9rem;
+
+        margin-bottom:10px;
+
+    }
+
+    .datos h3{
+
+        font-size:.82rem;
+
+        line-height:1.25;
+
+    }
+
+    .datos p{
+
+        font-size:.75rem;
+
+    }
+
+}
+
+
+/* ---------- CELULARES MUY PEQUEÑOS ---------- */
+
+@media (max-width:360px){
+
+    .hero h1{
+
+        font-size:1.7rem;
+
+    }
+
+    .hero p{
+
+        font-size:.85rem;
+
+    }
+
+    .presentacion{
+
+        padding:15px;
+
+    }
+
+    .presentacion h2{
+
+        font-size:1.3rem;
+
+    }
+
+    .presentacion p{
+
+        font-size:.85rem;
+
+    }
+
+    .especialidades h2{
+
+        font-size:1.2rem;
+
+    }
+
+    /* COMIDAS */
+
+    .comidas{
+
+        gap:8px;
+
+    }
+
+    .comida{
+
+        font-size:.75rem;
+
+        padding:8px;
+
+        min-height:50px;
+
+    }
+
+    /* RANCHOS */
+
+    .ranchos{
+
+        gap:8px;
+
+    }
+
+    .rancho{
+
+        padding:10px;
+
+    }
+
+    .numero{
+
+        width:46px;
+        height:46px;
+
+        font-size:.8rem;
+
+    }
+
+    .datos h3{
+
+        font-size:.72rem;
+
+    }
+
+    .datos p{
+
+        font-size:.68rem;
+
+    }
+
+}
